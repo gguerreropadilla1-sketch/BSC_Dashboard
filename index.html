@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSC - Seguimiento de Indicadores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>BSC — Seguimiento de Indicadores</h1>
+        <p>Desempeño de agentes · Atención al ciudadano</p>
+    </div>
+
+    <div id="actualizacion">
+        Última actualización: —
+    </div>
+</header>
+
+<main>
+
+    <section class="filtros">
+
+        <div>
+            <label for="mes">Mes</label>
+            <select id="mes">
+                <option value="todos">Todos</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="agente">Agente</label>
+            <select id="agente">
+                <option value="todos">Todos</option>
+            </select>
+        </div>
+
+    </section>
+
+
+  
+
+
+<!-- FICHA INDIVIDUAL DEL AGENTE -->
+
+<section id="fichaAgente" class="panel ficha-agente" style="display:none;">
+
+    <div class="ficha-header">
+
+        <div>
+            <h2 id="nombreAgente"></h2>
+            <p id="periodoAgente"></p>
+        </div>
+
+        <div id="estadoAgente" class="estado"></div>
+
+    </div>
+
+
+    <div class="ficha-indicadores">
+
+        <div class="ficha-indicador">
+            <span>ECUF</span>
+            <strong id="fichaECUF">—</strong>
+            <small>Meta ≥ 88%</small>
+        </div>
+
+        <div class="ficha-indicador">
+            <span>ECN</span>
+            <strong id="fichaECN">—</strong>
+            <small>Meta ≥ 88%</small>
+        </div>
+
+        <div class="ficha-indicador">
+            <span>Encuesta</span>
+            <strong id="fichaEncuesta">—</strong>
+            <small>Meta ≥ 80%</small>
+        </div>
+
+        <div class="ficha-indicador">
+            <span>Formación</span>
+            <strong id="fichaFormacion">—</strong>
+            <small>Meta ≥ 85%</small>
+        </div>
+
+        <div class="ficha-indicador">
+            <span>Tipificación</span>
+            <strong id="fichaTipificacion">—</strong>
+            <small>Meta ≥ 85%</small>
+        </div>
+
+    </div>
+
+
+    <div id="detalleEstado" class="detalle-estado"></div>
+
+</section>
+
+
+<section class="resumen">
+
+    <div class="tarjeta critica">
+        <span>AGENTES CRÍTICOS</span>
+        <strong id="totalCriticos">0</strong>
+    </div>
+
+    <div class="tarjeta reincidente">
+        <span>REINCIDENTES</span>
+        <strong id="totalReincidentes">0</strong>
+    </div>
+
+    <div class="tarjeta cumplimiento">
+        <span>EN CUMPLIMIENTO</span>
+        <strong id="totalCumplimiento">0</strong>
+    </div>
+
+    <div class="tarjeta agentes">
+        <span>TOTAL AGENTES</span>
+        <strong id="totalAgentes">0</strong>
+    </div>
+
+</section>
+
+    <section class="panel">
+
+        <div class="titulo-panel">
+            🔴 Agentes críticos
+        </div>
+
+        <div class="tabla-contenedor">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Agente</th>
+                        <th>ECUF</th>
+                        <th>ECN</th>
+                        <th>Encuesta</th>
+                        <th>Formación</th>
+                        <th>Tipificación</th>
+                        <th>Motivo</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaCriticos">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <section class="panel">
+
+        <div class="titulo-panel reincidente-titulo">
+            🔄 Agentes reincidentes
+        </div>
+
+        <div class="tabla-contenedor">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Agente</th>
+                        <th>Indicador</th>
+                        <th>Períodos</th>
+                        <th>Resultado actual</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaReincidentes">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <section class="panel">
+
+        <div class="titulo-panel">
+            Indicadores de la operación
+        </div>
+
+        <div class="indicadores">
+
+            <div class="indicador">
+                <h3>ECUF</h3>
+                <strong id="ecuf">—</strong>
+                <small>Meta ≥ 88%</small>
+            </div>
+
+            <div class="indicador">
+                <h3>ECN</h3>
+                <strong id="ecn">—</strong>
+                <small>Meta ≥ 88%</small>
+            </div>
+
+            <div class="indicador">
+                <h3>Encuesta</h3>
+                <strong id="encuesta">—</strong>
+                <small>Meta ≥ 80%</small>
+            </div>
+
+            <div class="indicador">
+                <h3>Formación</h3>
+                <strong id="formacion">—</strong>
+                <small>Meta ≥ 85%</small>
+            </div>
+
+            <div class="indicador">
+                <h3>Tipificación</h3>
+                <strong id="tipificacion">—</strong>
+                <small>Meta ≥ 85%</small>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+<script src="datos_bsc.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html> 
