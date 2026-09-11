@@ -10,7 +10,9 @@ body {
 }
 
 
- header {
+ /* ENCABEZADO */
+
+header {
     background: linear-gradient(
         90deg,
         #0B2D5C,
@@ -25,13 +27,23 @@ body {
     align-items: center;
 }
 
-    color: white;
-    padding: 22px 35px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header h1 {
+    margin: 0;
+    font-size: 25px;
 }
+
+header p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+#actualizacion {
+    font-size: 13px;
+}
+
+    
+
 
 header h1 {
     margin: 0;
